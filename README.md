@@ -47,3 +47,15 @@ Press **`q`** to exit the recognition window.
 ## Notes
 
 This project uses OpenCV's built‑in Haar cascade for face detection and the LBPH face recognizer for identification. Ensure you have a webcam attached when running the scripts.
+
+## iOS Interface
+
+A basic SwiftUI application is available in the `ios/FaceRecUI` directory. It communicates with a small Python server (`server.py`) that exposes endpoints for collecting faces, training the model and recognizing faces from images.
+
+Run the server with:
+
+```bash
+python server.py
+```
+
+Open the Swift files in Xcode to build and run the iOS app.
