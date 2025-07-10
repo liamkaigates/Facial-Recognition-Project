@@ -3,3 +3,4 @@
 /trained_model.yml
 /labels.npy
 __pycache__/
+venv
