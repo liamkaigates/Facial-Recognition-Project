@@ -33,6 +33,9 @@ def train(data_dir: str = 'data', model_path: str = 'trained_model.yml', labels_
     if not faces:
         print('No training data found.')
         return
+    if not hasattr(cv2, 'face'):
+        print("Error: OpenCV is missing the 'face' module. Install opencv-contrib-python.")
+        return
     recognizer = cv2.face.LBPHFaceRecognizer_create()
     recognizer.train(faces, labels)
     recognizer.save(model_path)

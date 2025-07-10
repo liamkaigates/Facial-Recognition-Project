@@ -14,6 +14,13 @@ Install the dependencies with:
 pip install -r requirements.txt
 ```
 
+After installation you can confirm that the `cv2.face` module is available by
+running:
+
+```bash
+python -c "import cv2; print('face module', hasattr(cv2, 'face'))"
+```
+
 The project requires the `opencv-contrib-python` package so that the `cv2.face`
 module is available for LBPH recognition. Using a different OpenCV build may
 result in an `AttributeError` when running the training or recognition scripts.

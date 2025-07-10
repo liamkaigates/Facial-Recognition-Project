@@ -4,6 +4,9 @@ import sys
 
 
 def recognize(model_path: str = 'trained_model.yml', labels_path: str = 'labels.npy'):
+    if not hasattr(cv2, 'face'):
+        print("Error: OpenCV is missing the 'face' module. Install opencv-contrib-python.")
+        return
     recognizer = cv2.face.LBPHFaceRecognizer_create()
     recognizer.read(model_path)
     label_map = np.load(labels_path, allow_pickle=True).item()
