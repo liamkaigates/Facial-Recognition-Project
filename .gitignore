@@ -1,0 +1,5 @@
+# Ignore training data and models
+/data/
+/trained_model.yml
+/labels.npy
+__pycache__/
