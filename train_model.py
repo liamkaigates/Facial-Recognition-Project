@@ -9,6 +9,9 @@ def prepare_training_data(data_dir: str = 'data'):
     label_map = {}
     label_id = 0
 
+    if not os.path.isdir(data_dir):
+        return faces, np.array(labels), label_map
+
     for person_name in os.listdir(data_dir):
         person_path = os.path.join(data_dir, person_name)
         if not os.path.isdir(person_path):
@@ -29,6 +32,9 @@ def train(data_dir: str = 'data', model_path: str = 'trained_model.yml', labels_
     faces, labels, label_map = prepare_training_data(data_dir)
     if not faces:
         print('No training data found.')
+        return
+    if not hasattr(cv2, 'face'):
+        print("Error: OpenCV is missing the 'face' module. Install opencv-contrib-python.")
         return
     recognizer = cv2.face.LBPHFaceRecognizer_create()
     recognizer.train(faces, labels)
