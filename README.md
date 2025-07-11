@@ -70,4 +70,10 @@ Run the server with:
 python server.py
 ```
 
+### Building the iOS app
+
+1. Open **Xcode** and choose **Open...** to open the `ios/FaceRecUI` folder.
+2. Select a simulator or a connected device as the run target.
+3. Press **Run** (`Cmd+R`) to build and launch the app.
+
 Open the Swift files in Xcode to build and run the iOS app.
