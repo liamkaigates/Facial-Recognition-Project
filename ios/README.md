@@ -14,6 +14,7 @@ Python server to perform face collection, training and recognition.
    The server listens on `http://localhost:8000`.
 
 2. Open the `ios/FaceRecUI` folder in **Xcode**.
+
    The project consists of the SwiftUI files `FaceRecApp.swift`,
    `ContentView.swift`, `CameraView.swift` and the helper `RecognizerAPI`.
    Select a simulator or device and press **Run** (`Cmd+R`) to build and launch
